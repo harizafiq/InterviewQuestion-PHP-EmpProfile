@@ -99,13 +99,13 @@ function Form() {
                     backgroundColor: "#8db600",
                     color: "white"
                     }}>Staf successfully added
-                </article> : 
+                </article> : isStatus === "500" ?
                 <article style={{
                     backgroundColor: "#e52b50",
                     color: "white"
-                    }}>{isStatus === '500' ? 'Problem connecting with the server. Please try again in a minute' : 'Please check input'}
+                    }}>Problem connecting with the server. Please try again in a minute
                 </article>
-                }
+                : ''}
             <h5>Add Staf</h5>
             <form onSubmit={handleSubmit}>
                 {/* { inputs.map((input, index) =>{
